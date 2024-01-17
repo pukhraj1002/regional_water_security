@@ -13,7 +13,9 @@ REQUIREMENTS :-
 
 # SOLUTION
 We will be using IOT Sensors for real time water analysis
-Detecting water quality and providing real-time analysis reports involve a combination of hardware and software components. Here is a general guide on how you can approach this:
+Detecting water quality and providing real-time analysis reports involve a combination of hardware and software components.
+
+ThingSpeak Public Channel for sensor data: https://thingspeak.com/apps/matlab_visualizations/534649
 
 Hardware Components:-
 1. Sensors: Common parameters to measure include pH, turbidity, dissolved oxygen, conductivity, and various contaminants. Therefore we can use pH meters, turbidity sensors, dissolved oxygen sensors, and water quality testing strips.
