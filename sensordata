@@ -1,0 +1,44 @@
+% Creating a MATLAB Visualization code for ThingSpeak to get sensor data with respect to time
+
+% Read data from ThingSpeak channel
+data = thingSpeakRead(2404485, 'ReadKey', 'KNHBU3NLO9PTYYZ4', 'NumPoints', 100);
+% Here 24044845 can be replaced by different Channel ID and KNHBU3NLO9PTYYZ4 by Read API key
+% Extract x-axis values (time) and y-axis values (sensor data or any relevant data)
+if ~isempty(data)
+    time = data.Timestamps;
+    sensorData = data.Field1;
+else
+    % If no data is available, create a placeholder with a single point at the current time
+    time = datetime('now');
+    sensorData = NaN; % Use NaN or any other placeholder value
+end
+
+% Create a figure
+figure;
+
+% Plot the sensor data or a placeholder with a single point
+plot(time, sensorData, 'b-', 'LineWidth', 2);
+
+% Set y-axis limits
+ylim([0, 300]);
+
+% Add a dotted line at y = 100
+hold on;
+plot(get(gca, 'XLim'), [100, 100], 'r--', 'LineWidth', 1);
+
+% Add a dotted line at y = 200
+plot(get(gca, 'XLim'), [200, 200], 'g--', 'LineWidth', 1);
+
+% Add labels and title
+xlabel('Time');
+ylabel('Sensor Data');
+title('Graph with Dotted Lines at 100 and 200 Levels');
+
+% Display grid
+grid on;
+
+% Add legend
+legend('Sensor Data', 'Dotted Line at 100', 'Dotted Line at 200');
+
+% Save the figure (optional)
+saveas(gcf, 'Graph_with_Dotted_Lines.png');
