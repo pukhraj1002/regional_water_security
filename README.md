@@ -12,10 +12,15 @@ REQUIREMENTS :-
 6) Create protocols and tools for emergency response in case of disruptions or contamination incidents, ensuring swift and effective corrective actions to minimize the impact on communities
 
 # SOLUTION
-We will be using IOT Sensors for real time water analysis
+We will be using IOT Sensors for real time water analysis.
 Detecting water quality and providing real-time analysis reports involve a combination of hardware and software components.
 
 ThingSpeak Public Channel for sensor data: https://thingspeak.com/channels/2404485
+
+Graph to represent sensor data with a marking of range which can be adjusted for a good quality water. Different sensors can give data and the graph can be adjusted accordingly :
+
+![-Ek999bH2HjgvIRN36w0JQ](https://github.com/pukhraj1002/rubix24_nextgencoders/assets/114336304/8af57945-52b7-4ded-ad7f-0268d61c674d)
+
 
 Hardware Components:-
 1. Sensors: Common parameters to measure include pH, turbidity, dissolved oxygen, conductivity, and various contaminants. Therefore we can use pH meters, turbidity sensors, dissolved oxygen sensors, and water quality testing strips.
