@@ -11,8 +11,20 @@
 
     <h1>Welcome to the Main Page</h1>
 
-    <!-- Use an iframe to include map.html -->
-    <iframe src="map/map.html" width="600" height="400" frameborder="0"></iframe>
+    <!-- Include the content of map.html directly -->
+    <div id="map-container"></div>
+
+    <script>
+        // Use AJAX to fetch and include the content of map.html
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("map-container").innerHTML = this.responseText;
+            }
+        };
+        xhr.open("GET", "map/map.html", true);
+        xhr.send();
+    </script>
 
 </body>
 </html>
