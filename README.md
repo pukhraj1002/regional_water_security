@@ -34,3 +34,6 @@ Software Components:
 
 # Figma Prototype 
 Prototype link : https://www.figma.com/file/G9Xf5W93sS9VGexCsUo6X5/Interactive-map-(Community)?type=design&node-id=0%3A1&mode=design&t=B67nntcf97DXFzE2-1
+
+# Map
+Link to the main map page : https://rubix24-nextgencoders.vercel.app/map/map.html
