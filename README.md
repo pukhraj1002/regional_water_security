@@ -32,5 +32,5 @@ Software Components:
 1. Arduino IDE : For determining how the sensors' data should be used. And to transmit data in suitable form. 
 2. Server-Side Application: ThingSpeak will be used for getting real time analysis and data feed on graph.
 
-
-
+# Figma Prototype 
+Prototype link : https://www.figma.com/file/G9Xf5W93sS9VGexCsUo6X5/Interactive-map-(Community)?type=design&node-id=0%3A1&mode=design&t=B67nntcf97DXFzE2-1
