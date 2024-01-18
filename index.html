@@ -1,30 +1,33 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Map Button Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Welcome to the Main Page</h1>
+<button onclick="loadMap()">MAP</button>
 
-    <!-- Include the content of map.html directly -->
-    <div id="map-container"></div>
-
-    <script>
-        // Use AJAX to fetch and include the content of map.html
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("map-container").innerHTML = this.responseText;
-            }
-        };
-        xhr.open("GET", "map/map.html", true);
-        xhr.send();
-    </script>
+<script>
+    function loadMap() {
+        // Assuming the map.html file is in the "map" folder
+        window.location.href = 'map/map.html';
+    }
+</script>
 
 </body>
 </html>
