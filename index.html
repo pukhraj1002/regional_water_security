@@ -1,71 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title> Water Suppliers </title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.umd.js"></script>
-  <link href="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.css" rel="stylesheet" />
-  <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v2.0.0/leaflet-maptilersdk.js"></script>
-  <!-- Leaflet.MarkerCluster -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js'></script>
-  <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css' rel='stylesheet' />
-  <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css' rel='stylesheet' />
-  <style>
-    #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
 </head>
 <body>
-	<div id="map"></div>
-	<script>
-    const key = '1YO5equYNstrqSQXgoRm';
-    const map = new L.Map('map', {maxZoom: 22}).setView([20.5937, 78.9629], 5); // Centered on India
-    const mtLayer = L.maptilerLayer({
-      style: L.maptilerStyle.DATAVIZ.LIGHT,
-      apiKey: key,
-    }).addTo(map);
 
-    const markers = L.markerClusterGroup();
+    <h1>Welcome to the Main Page</h1>
 
-    // Function to generate a random number within a specified range
-    function getRandomNumber(min, max) {
-      return Math.random() * (max - min) + min;
-    }
+    <!-- Use an iframe to include map.html -->
+    <iframe src="map/map.html" width="600" height="400" frameborder="0"></iframe>
 
-    // Generate and add random clusters within India
-    const numClusters = 500; // Adjust as needed
-    for (let i = 0; i < numClusters; i++) {
-      const lat = getRandomNumber(8, 37); // Latitude range for India
-      const lng = getRandomNumber(68, 89); // Longitude range for India
-
-      const cluster = L.markerClusterGroup();
-      const numMarkersInCluster = Math.floor(Math.random() * 5) + 1; // Random number of markers in each cluster
-
-      for (let j = 0; j < numMarkersInCluster; j++) {
-        const markerColor = Math.random() < 0.5 ? 'green' : 'red'; // Randomly assign green or red color
-        const marker = L.marker([lat + getRandomNumber(-0.1, 0.1), lng + getRandomNumber(-0.1, 0.1)], { icon: L.divIcon({ className: 'custom-marker', html: `<div style="background-color: ${markerColor};" class="marker-color"></div>` }) });
-        marker.bindPopup(`Cluster ${i + 1}, Marker ${j + 1}`);
-        cluster.addLayer(marker);
-      }
-
-      markers.addLayer(cluster);
-    }
-
-    map.addLayer(markers);
-	</script>
-	<style>
-		.custom-marker {
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-			border: 2px solid #fff;
-			box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
-		}
-		.marker-color {
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-		}
-	</style>
 </body>
 </html>
