@@ -1,5 +1,4 @@
-# RUBIX'24 NEXTGEN CODERS 
-# PS - Smart Solutions for Rural Water Security
+# # Smart Solutions for Rural Water Security
 PROBLEM :
 In rural regions facing water scarcity and contamination, the implementation of water supply projects, such as the Jal Jeevan Mission, is crucial for providing clean drinking water to households. Engaging Implementation Support Agencies (ISAs) is vital for the successful execution of these projects at the grassroots level. The challenge is to streamline the planning and mobilization phase, ensuring effective communication and collaboration between NGOs, communities, and Gram Panchayats (GPs) for the sustainable management of water supply systems.
 
